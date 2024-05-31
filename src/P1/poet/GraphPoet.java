@@ -12,14 +12,7 @@ import P1.graph.Graph;
 
 /**
  * A graph-based poetry generator.
- * 
- * <p>GraphPoet is initialized with a corpus of text, which it uses to derive a
- * word affinity graph.
- * Vertices in the graph are words. Words are defined as non-empty
- * case-insensitive strings of non-space non-newline characters. They are
- * delimited in the corpus by spaces, newlines, or the ends of the file.
- * Edges in the graph count adjacencies: the number of times "w1" is followed by
- * "w2" in the corpus is the weight of the edge from w1 to w2.
+ * dge from w1 to w2.
  * 
  * <p>For example, given this corpus:
  * <pre>    Hello, HELLO, hello, goodbye!    </pre>
@@ -31,8 +24,7 @@ import P1.graph.Graph;
  * 
  * <p>Given an input string, GraphPoet generates a poem by attempting to
  * insert a bridge word between every adjacent pair of words in the input.
- * The bridge word between input words "w1" and "w2" will be some "b" such that
- * w1 -> b -> w2 is a two-edge-long path with maximum-weight weight among all
+ * The bridge word between input words "w1" and * w1 -> b -> w2 is a two-edge-long path with maximum-weight weight among all
  * the two-edge-long paths from w1 to w2 in the affinity graph.
  * If there are no such paths, no bridge word is inserted.
  * In the output poem, input words retain their original case, while bridge
