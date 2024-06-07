@@ -17,9 +17,6 @@ public class ConcreteVerticesGraph<L> implements P1.graph.Graph<L> {
     
     // Abstraction function:
     //   AF(vertices) = 一个由vertices中所有顶点及每个顶点的带权有向出边构成的带权有向图
-    // Representation invariant:
-    //   vertices是一个没有重复的顶点的顶点集
-    //   vertices中每个顶点的出边都是权值为正数且为int类型的有向边，边的终点都在vertices中
     // Safety from rep exposure:
     //   vertices为private
     //   vertices()方法在返回Set之前使用防御性拷贝
